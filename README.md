@@ -11,3 +11,4 @@ To be able to use this component in a different Angular2 app, you will need to m
 
 - Bootstrap v4 (Twitter UI)
 - Font Awesome (CSS Toolkit)
+- Add a `<script>` tag in the `index.html` for the `skycons.js` library that can be found in `app/weather-widget/js'.
