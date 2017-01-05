@@ -1,6 +1,6 @@
-export const FORECAST_KEY = "c13d133ea0c1525aa516811eb2f77eba";
+export const FORECAST_KEY = "859473f01b0753decff7503695b46d08";
 export const FORECAST_ROOT = "https://api.darksky.net/forecast/";
-export const GOOGLE_KEY = "AIzaSyBc3MeIFW3rgAKh8J-0XBtTPr6BIQNd50Q";
+export const GOOGLE_KEY = "AIzaSyB07lTpchzi3lCHTPla0kVSkhaxzz6gWmg";
 export const GOOGLE_ROOT = "https://maps.googleapis.com/maps/api/geocode/json";
 export const WEATHER_COLORS = {
     'default': {

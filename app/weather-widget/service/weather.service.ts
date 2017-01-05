@@ -3,6 +3,7 @@ import { Jsonp, Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 import { FORECAST_KEY, FORECAST_ROOT, GOOGLE_KEY, GOOGLE_ROOT } from '../constants/constants';
 
@@ -14,12 +15,13 @@ export class WeatherService {
     getCurrentLocation(): Observable<any> {
         if (navigator.geolocation) {
             return Observable.create(observer => {
-                navigator.geolocation.getCurrentPosition(pos => {
-                    observer.next(pos);
-                }),
+                navigator.geolocation.getCurrentPosition(
+                    pos => {
+                        observer.next(pos);
+                    },
                     err => {
-                        return Observable.throw(err);
-                    }
+                        observer.error(err);
+                    });
             });
         } else {
             return Observable.throw("Geolocation is not available");

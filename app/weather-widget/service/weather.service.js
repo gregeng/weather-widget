@@ -13,6 +13,7 @@ var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/catch');
+require('rxjs/add/observable/throw');
 var constants_1 = require('../constants/constants');
 var WeatherService = (function () {
     function WeatherService(jsonp, http) {
@@ -24,10 +25,9 @@ var WeatherService = (function () {
             return Observable_1.Observable.create(function (observer) {
                 navigator.geolocation.getCurrentPosition(function (pos) {
                     observer.next(pos);
-                }),
-                    function (err) {
-                        return Observable_1.Observable.throw(err);
-                    };
+                }, function (err) {
+                    observer.error(err);
+                });
             });
         }
         else {

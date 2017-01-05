@@ -1,7 +1,7 @@
 "use strict";
-exports.FORECAST_KEY = "c13d133ea0c1525aa516811eb2f77eba";
+exports.FORECAST_KEY = "859473f01b0753decff7503695b46d08";
 exports.FORECAST_ROOT = "https://api.darksky.net/forecast/";
-exports.GOOGLE_KEY = "AIzaSyBc3MeIFW3rgAKh8J-0XBtTPr6BIQNd50Q";
+exports.GOOGLE_KEY = "AIzaSyB07lTpchzi3lCHTPla0kVSkhaxzz6gWmg";
 exports.GOOGLE_ROOT = "https://maps.googleapis.com/maps/api/geocode/json";
 exports.WEATHER_COLORS = {
     'default': {
